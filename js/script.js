@@ -113,7 +113,7 @@ $(document).ready(function(){
 	tinymce.init({
 		language: 'ru',
 		selector: '.editor',
-		content_css: '../css/style.css, ../js/tinymce/style.css',
+		content_css: 'css/style.css, js/tinymce/style.css',
 		height: 300,
 
 		menubar: false,
@@ -173,9 +173,9 @@ $(document).ready(function(){
 		],
 
 		templates: [
-			{title: 'Врезка', url: '../js/tinymce/templates/incut.html'},
-			{title: 'Слайдер', url: '../js/tinymce/templates/slider.html'},
-			{title: 'Картинка с описанием', url: '../js/tinymce/templates/image.html'}
+			{title: 'Врезка', url: 'js/tinymce/templates/incut.html'},
+			{title: 'Слайдер', url: 'js/tinymce/templates/slider.html'},
+			{title: 'Картинка с описанием', url: 'js/tinymce/templates/image.html'}
 		]
 	});
 });
