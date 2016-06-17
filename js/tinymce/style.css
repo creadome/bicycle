@@ -1,0 +1,16 @@
+body { padding: 20px; }
+
+img.left { float: left; margin: 0 20px 20px 0; }
+
+p.center { text-align: center; }
+p.right { text-align: right; }
+
+.incut { width: 300px; background: #eee; padding: 20px; float: left; margin: 0 20px 20px 0; }
+.incut img { max-width: 100%; }
+
+.image { padding-left: 80px; margin-bottom: 20px; }
+.image:after { content: ''; display: block; clear: both; }
+.image img { float: left; margin-left: -80px; }
+
+.slider { border: 1px dashed #ccc; padding: 20px; margin-bottom: 20px; }
+.slider img { max-width: 100%; }
