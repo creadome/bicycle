@@ -13,13 +13,13 @@ $(document).ready(function(){
 
 	$('[data-show]').click(function(){
 		var link = $(this),
-			show = $(link.data('show')),
-			text = link.data('text');
+			content = $(link.data('show')),
+			change = link.data('change');
 
-		link.data('text', link.text());
+		link.data('change', link.text());
 
-		if (show.is(':visible')) { show.fadeTo(250, 0.25).slideUp(250, function(){ link.text(text); }); }
-		else { link.text(text); show.css({ opacity: 0.25 }).slideDown(250).fadeTo(250, 1); }
+		if (content.is(':visible')) { content.fadeTo(250, 0.25).slideUp(250, function(){ link.text(change); }); }
+		else { link.text(change); content.css({ opacity: 0.25 }).slideDown(250).fadeTo(250, 1); }
 	});
 
 	$(document).on('click', '[data-modal]', function(e){

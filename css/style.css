@@ -16,8 +16,6 @@ small { display: inline-block; font-size: .75rem; color: #909090; }
 a { color: #05c; }
 a:hover { color: #c00; }
 
-span.js { color: #05c; border-bottom: 1px dotted #05c; cursor: pointer; }
-
 img { border: 0; vertical-align: top; }
 
 table { width: 100%; border-collapse: collapse; }
@@ -31,25 +29,14 @@ input[type='text'], select, textarea { border: 1px solid #ccc; }
 input[type='text'], select { height: 40px; line-height: 40px; padding: 0 10px; }
 input[type='text']:focus, select:focus, textarea:focus { border-color: #09c; }
 
-input + span:before { display: inline-block; width: 20px; font: 14px/1 'FontAwesome'; color: #09c; }
-
-input[type='checkbox'],
-input[type='radio'],
-input[type='file'] { display: none; }
-
-input[type='checkbox'] + span:before { content: '\f096'; }
-input[type='checkbox']:checked + span:before { content: '\f046'; }
-
-input[type='radio'] + span:before { content: '\f1db'; }
-input[type='radio']:checked + span:before { content: '\f192'; }
-
-input[type='file'] + span:before { content: '\f0c6'; }
-
 textarea { padding: 10px; resize: vertical; }
 label { cursor: pointer; display: inline-block; }
+label + label { margin-left: 20px; }
 button { border: 0; line-height: 40px; padding: 0 20px; background: #09c; color: #fff; cursor: pointer; }
 
 hr { border: 0; border-top: 1px dashed #ccc; margin: 40px 0; }
+
+span.js { color: #05c; border-bottom: 1px dotted #05c; cursor: pointer; }
 
 .clearfix:after { content: ''; display: block; clear: both; }
 .hidden { display: none; }
@@ -77,6 +64,22 @@ header { background: #eee; text-align: center; line-height: 200px; font-size: 6r
 .page-wrapper { max-width: 960px; margin: 0 auto; padding: 40px; }
 
 [class^='w-']:before { display: block; content: ''; background: #eee; height: 40px; }
+
+/* input */
+
+input + span:before { display: inline-block; width: 20px; font: 14px/1 'FontAwesome'; color: #09c; }
+
+input[type='checkbox'],
+input[type='radio'],
+input[type='file'] { display: none; }
+
+input[type='checkbox'] + span:before { content: '\f096'; }
+input[type='checkbox']:checked + span:before { content: '\f046'; }
+
+input[type='radio'] + span:before { content: '\f1db'; }
+input[type='radio']:checked + span:before { content: '\f192'; }
+
+input[type='file'] + span:before { content: '\f0c6'; }
 
 /* tabs */
 
