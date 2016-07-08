@@ -14,13 +14,13 @@
 		<link href="js/custombox/custombox.min.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 
-		<script src="js/jquery-2.2.4.min.js"></script>
+		<script src="js/jquery-3.0.0.min.js"></script>
+		<script src="js/holder.min.js"></script>
 		<script src="js/custombox/custombox.min.js"></script>
 		<script src="js/custombox/legacy.min.js"></script>
 		<script src="js/fotorama/fotorama.js"></script>
 		<script src="js/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
 		<script src="js/slick/slick.min.js"></script>
-		<script src="js/holder.min.js"></script>
 		<script src="js/script.js"></script>
 	</head>
 
@@ -95,7 +95,8 @@
 			<hr>
 
 			<form>
-				<p><input type="text" placeholder="Имя"></p>
+				<p><label class="float"><input type="text" required>
+				<span>Имя</span></label></p>
 
 				<p><select>
 					<option>Выпадающий список</option>
@@ -120,7 +121,8 @@
 					<span>Прикрепить файл</span>
 				</label></p>
 
-				<p><textarea rows="5" placeholder="Текст"></textarea></p>
+				<p><label class="float"><textarea rows="5" required></textarea>
+				<span>Текст</span></label></p>
 
 				<button type="submit">Отправить</button>
 			</form>
@@ -149,7 +151,7 @@
 
 			<hr>
 
-			<p><span class="js" data-show="#more" data-change="Cвернуть">Подробнее</span></p>
+			<p><span class="js" data-show="#more" data-text="Cвернуть">Подробнее</span></p>
 
 			<div id="more" class="hidden">
 				<p>Политическое учение Монтескье означает институциональный субъект политического процесса. Понятие политического конфликта, в первом приближении, формирует прагматический референдум.</p>
@@ -173,6 +175,10 @@
 
 			<hr>
 
+			<a href="javascript: message('Фактор коммуникации восстанавливает социометрический рекламный бриф');" class="button">Сообщение</a>
+
+			<hr>
+
 			<div class="fotorama">
 				<img src="tmp/1200-900.jpg" data-caption="Таргетирование деятельно тормозит институциональный креатив">
 				<img src="tmp/900-1200.jpg" data-caption="Бизнес-план, в рамках сегодняшних воззрений, раскручивает инвестиционный продукт. Медиамикс исключительно концентрирует популярный клиентский спрос, невзирая на действия конкурентов.">
@@ -183,17 +189,19 @@
 
 			<hr>
 
-			<a href="tmp/800-600.jpg" class="fancybox" rel="gallery" title="Таргетирование деятельно тормозит институциональный креатив"><img src="tmp/300-200.jpg"></a>
-			<a href="tmp/600-600.jpg" class="fancybox" rel="gallery" title="Бизнес-план, в рамках сегодняшних воззрений, раскручивает инвестиционный продукт. Медиамикс исключительно концентрирует популярный клиентский спрос, невзирая на действия конкурентов."><img src="tmp/200-200.jpg"></a>
-			<a href="tmp/400-600.jpg" class="fancybox" rel="gallery"><img src="tmp/100-200.jpg"></a>
+			<a href="tmp/1200-900.jpg" class="fancybox" rel="gallery" title="Таргетирование деятельно тормозит институциональный креатив"><img src="tmp/240-180.jpg"></a>
+			<a href="tmp/900-1200.jpg" class="fancybox" rel="gallery" title="Бизнес-план, в рамках сегодняшних воззрений, раскручивает инвестиционный продукт. Медиамикс исключительно концентрирует популярный клиентский спрос, невзирая на действия конкурентов."><img src="tmp/135-180.jpg"></a>
+			<a href="tmp/1600-900.jpg" class="fancybox" rel="gallery"><img src="tmp/320-180.jpg"></a>
 
 			<hr>
 
 			<div class="slick">
-				<div><img src="tmp/880-200.jpg"></div>
-				<div><img src="tmp/880-300.jpg"></div>
-				<div><img src="tmp/880-400.jpg"></div>
+				<div><img src="holder.js/100px200" height="200"></div>
+				<div><img src="holder.js/100px300" height="300"></div>
+				<div><img src="holder.js/100px400" height="400"></div>
 			</div>
 		</div>
+
+		<div id="messages-wrapper" class="messages-wrapper"></div>
 	</body>
 </html>

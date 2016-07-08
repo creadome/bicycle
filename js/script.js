@@ -13,13 +13,19 @@ $(document).ready(function(){
 
 	$('[data-show]').click(function(){
 		var link = $(this),
-			content = $(link.data('show')),
-			change = link.data('change');
+			show = $(link.data('show')),
+			text = link.data('text');
 
-		link.data('change', link.text());
+		link.data('text', link.text());
 
-		if (content.is(':visible')) { content.fadeTo(250, 0.25).slideUp(250, function(){ link.text(change); }); }
-		else { link.text(change); content.css({ opacity: 0.25 }).slideDown(250).fadeTo(250, 1); }
+		if (show.is(':visible')) {
+			show.slideUp(250, function(){
+				link.text(text);
+			});
+		} else {
+			link.text(text);
+			show.slideDown(250);
+		}
 	});
 
 	$(document).on('click', '[data-modal]', function(e){
@@ -110,3 +116,13 @@ $(document).ready(function(){
 		nextArrow: '<i class="fa fa-chevron-right next"></i>'
 	});
 });
+
+function message(text) {
+	var wrapper = $('#messages-wrapper');
+
+	wrapper.prepend('<div class="message">' + text + '</div>');
+
+	$('.message:first', wrapper).slideDown(250).delay(5000).fadeOut(250, function(){
+		$(this).remove();
+	});
+}
