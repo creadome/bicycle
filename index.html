@@ -20,24 +20,35 @@
 	<body>
 		<div class="wrapper">
 			<div class="grid">
-				<div class="w-25">1/4</div>
-				<div class="w-25">1/4</div>
-				<div class="w-25">1/4</div>
-				<div class="w-25">1/4</div>
+				<div class="width-25">1/4</div>
+				<div class="width-25">1/4</div>
+				<div class="width-25">1/4</div>
+				<div class="width-25">1/4</div>
 
-				<div class="w-33">1/3</div>
-				<div class="w-33">1/3</div>
-				<div class="w-33">1/3</div>
+				<div class="width-33">1/3</div>
+				<div class="width-33">1/3</div>
+				<div class="width-33">1/3</div>
 
-				<div class="w-50">1/2</div>
-				<div class="w-50">1/2</div>
+				<div class="width-50">1/2</div>
+				<div class="width-50">1/2</div>
 
-				<div class="w-33">1/3</div>
-				<div class="w-66">2/3</div>
+				<div class="width-33">1/3</div>
+				<div class="width-66">2/3</div>
 
-				<div class="w-25">1/4</div>
-				<div class="w-75">3/4</div>
+				<div class="width-25">1/4</div>
+				<div class="width-75">3/4</div>
 			</div>
+
+			<hr>
+
+			<p class="visible-desktop">Десктоп</p>
+			<p class="hidden-desktop">Не десктоп</p>
+
+			<p class="visible-tablet">Планшет</p>
+			<p class="hidden-tablet">Не планшет</p>
+
+			<p class="visible-mobile">Смартфон</p>
+			<p class="hidden-mobile">Не смартфон</p>
 
 			<hr>
 
@@ -46,6 +57,7 @@
 			<h1>Заголовок</h1>
 			<h2>Заголовок</h2>
 			<h3>Заголовок</h3>
+			<h4>Заголовок</h4>
 
 			<p>Таргетирование <b>деятельно</b> <i>тормозит</i> <span title=" Медиамикс исключительно концентрирует популярный клиентский спрос">институциональный креатив</span>. <a href="#">Фокусировка вырождена</a>. Воздействие на потребителя продуцирует рекламоноситель. Поисковая реклама без оглядки на авторитеты актаульна как никогда.</p>
 
@@ -84,11 +96,10 @@
 			</ol>
 
 			<form>
-				<p><label for="f-name">Имя</label>
-				<input id="f-name" type="text"></p>
+				<p><label for="input">Метка</label>
+				<input id="input" type="text"></p>
 
-				<p><label for="f-text">Текст</label>
-				<textarea id="f-text" rows="5"></textarea></p>
+				<p><textarea rows="5"></textarea></p>
 
 				<p><select>
 					<option>Выпадающий список</option>
@@ -110,7 +121,7 @@
 					<span>Прикрепить файл</span>
 				</label></p>
 
-				<button type="submit">Отправить</button>
+				<button type="button">Кнопка</button>
 			</form>
 		</div>
 	</body>
