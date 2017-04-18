@@ -12,7 +12,9 @@ h4 { font-size: 1rem; }
 p, blockquote, table, ul, ol { margin: 0 0 1.5rem; }
 p:last-child, blockquote:last-child, table:last-child, ul:last-child, ol:last-child { margin: 0; }
 
-blockquote { border-left: 5px solid #eee; font-size: 1.5rem; line-height: 1.3; padding: 20px; }
+blockquote { font-size: 1.5rem; line-height: 1.3; padding-left: 2.5rem; position: relative; }
+blockquote:before { position: absolute; left: 0; top: -1.5rem; display: block; content: '\201C'; font-size: 5rem; color: #ccc; }
+
 small { display: inline-block; font-size: .75rem; color: #909090; }
 
 a { color: #05c; }
@@ -68,10 +70,8 @@ hr { border: 0; border-top: 1px solid #eee; margin: 2rem 0; }
 .visible-tablet { display: none; }
 .visible-mobile { display: none; }
 
-.grid { display: flex; flex-wrap: wrap; align-items: flex-start; margin: 0 0 -20px -20px; }
-[class*='width-'] { padding: 0 0 20px 20px; }
-
-.height-equal { align-items: stretch; }
+.grid { display: flex; flex-wrap: wrap; margin: -20px 0 0 -20px; }
+[class*='width-'] { padding: 20px 0 0 20px; }
 
 .vertical-middle { align-items: center; }
 .vertical-bottom { align-items: flex-end; }
