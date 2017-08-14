@@ -20,7 +20,7 @@ small { display: inline-block; font-size: .75rem; color: #909090; }
 a { color: #05c; }
 a:hover { color: #c00; }
 
-img { max-width: 100%; border: 0; vertical-align: middle; }
+img { max-width: 100%; height: auto !important; border: 0; vertical-align: middle; }
 
 table { width: 100%; border-collapse: collapse; }
 table th,
