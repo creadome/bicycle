@@ -68,8 +68,7 @@ small { display: inline-block; font-size: .75rem; color: #999; }
 img { max-width: 100%; height: auto !important; border: 0; vertical-align: top; }
 
 table { width: 100%; border-collapse: collapse; }
-table th,
-table td { vertical-align: top; text-align: left; padding: 10px 20px 10px 0; border-top: 1px solid #ccc; }
+th, td { vertical-align: top; text-align: left; padding: 10px 20px 10px 0; border-top: 1px solid #ccc; }
 
 label { cursor: pointer; display: inline-block; }
 label[for] { margin-bottom: .5rem; }
@@ -145,7 +144,6 @@ hr { border: 0; border-top: 1px solid #eee; margin: 40px 0; }
 
 .offset-3 { margin-left: calc(3/12 * 100%); }
 .offset-4 { margin-left: calc(4/12 * 100%); }
-.offset-6 { margin-left: calc(6/12 * 100%); }
 
 .container { max-width: 800px; margin: 0 auto; padding: 20px; }
 [class*='cell-']:before { display: block; background: #eee; padding: 10px; content: attr(class); }
