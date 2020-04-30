@@ -2,53 +2,60 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<link href="favicon.ico" rel="icon">
 		<title>Bicycle</title>
 
-		<link href="styles/font-awesome.min.css" rel="stylesheet">
+		<link href="//fonts.googleapis.com/css?family=Roboto:400,400i,700,700i,900&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+		<link href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet">
+		<link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet">
 		<link href="styles/styles.css" rel="stylesheet">
 
-		<script src="scripts/jquery-3.2.1.min.js"></script>
+		<script src="//kit.fontawesome.com/63a4a82b1e.js" crossorigin="anonymous"></script>
+		<script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+		<script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 		<script src="scripts/script.js"></script>
 	</head>
 
 	<body>
-		<div class="container">
-			<div class="grid">
-				<div class="cell-3"></div>
-				<div class="cell-3"></div>
-				<div class="cell-3"></div>
-				<div class="cell-3"></div>
+		<div class="g-wrapper">
+			<hr>
 
-				<div class="cell-4"></div>
-				<div class="cell-4"></div>
-				<div class="cell-4"></div>
+			<div class="l-grid">
+				<div class="l-cell-3">3/12</div>
+				<div class="l-cell-3">3/12</div>
+				<div class="l-cell-3">3/12</div>
+				<div class="l-cell-3">3/12</div>
 
-				<div class="cell-6"></div>
-				<div class="cell-6"></div>
+				<div class="l-cell-4">4/12</div>
+				<div class="l-cell-4">4/12</div>
+				<div class="l-cell-4">4/12</div>
 
-				<div class="cell-4"></div>
-				<div class="cell-8"></div>
+				<div class="l-cell-6">6/12</div>
+				<div class="l-cell-6">6/12</div>
 
-				<div class="cell-3"></div>
-				<div class="cell-9"></div>
+				<div class="l-cell-4">4/12</div>
+				<div class="l-cell-8">8/12</div>
 
-				<div class="cell-6 offset-3"></div>
-				<div class="cell-4 offset-4"></div>
+				<div class="l-cell-3">3/12</div>
+				<div class="l-cell-9">9/12</div>
+
+				<div class="l-cell-6 l-offset-3">6/12, отступ 3/12</div>
+				<div class="l-cell-4 l-offset-4">4/12, отступ 4/12</div>
 			</div>
 
 			<hr>
 
-			<p class="desktop-visible">Десктоп</p>
-			<p class="desktop-hidden">Не десктоп</p>
+			<p class="l-desktop-visible">Десктоп</p>
+			<p class="l-desktop-hidden">Не десктоп</p>
 
-			<p class="tablet-visible">Планшет</p>
-			<p class="tablet-hidden">Не планшет</p>
+			<p class="l-tablet-visible">Планшет</p>
+			<p class="l-tablet-hidden">Не планшет</p>
 
-			<p class="phone-visible">Телефон</p>
-			<p class="phone-hidden">Не телефон</p>
+			<p class="l-phone-visible">Телефон</p>
+			<p class="l-phone-hidden">Не телефон</p>
 
 			<hr>
 
@@ -80,52 +87,80 @@
 			<ul>
 				<li>Пункт списка
 
-					<ul>
-						<li>Пункт списка</li>
-					</ul>
-				</li>
-			</ul>
-
-			<ol>
-				<li>Пункт списка
-
 					<ol>
-						<li>Пункт списка</li>
 						<li>Пункт списка</li>
 					</ol>
 				</li>
 
 				<li>Пункт списка</li>
+			</ul>
+
+			<ol>
+				<li>Пункт списка
+
+					<ul>
+						<li>Пункт списка</li>
+					</ul>
+				</li>
+
+				<li>Пункт списка</li>
 			</ol>
 
-			<form>
-				<p><label for="input">Метка</label>
-				<input id="input" type="text"></p>
+			<div id="replace">
+				<form method="post" action="" class="js-form-ajax" data-replace="replace">
+					<p><label for="input">Метка</label>
+					<input id="input" type="text"></p>
 
-				<p><textarea rows="5"></textarea></p>
+					<p><textarea rows="5"></textarea></p>
 
-				<p><select>
-					<option>Выпадающий список</option>
-					<option>Пункт списка</option>
-				</select><span></span></p>
+					<p><select>
+						<option>Выпадающий список</option>
+						<option>Пункт списка</option>
+					</select><span></span></p>
 
-				<p><label>
-					<input type="checkbox">
-					<span>Флажок</span>
-				</label></p>
+					<p><label>
+						<input type="checkbox">
+						<span>Флажок</span>
+					</label></p>
 
-				<p><label>
-					<input type="radio" name="radio">
-					<span>Переключатель</span>
-				</label></p>
+					<p><label>
+						<input type="radio" name="radio">
+						<span>Переключатель</span>
+					</label></p>
 
-				<p><label>
-					<input type="file" data-label="Прикрепить файл">
-					<span>Прикрепить файл</span>
-				</label></p>
+					<p><label>
+						<input type="file">
+						<span title="Прикрепить файл"></span>
+					</label></p>
 
-				<button type="button">Кнопка</button>
-			</form>
+					<button type="submit">Кнопка</button>
+				</form>
+			</div>
+
+			<hr>
+
+			<div class="b-slider">
+				<div class="js-slider">
+					<img src="https://unsplash.it/800/400/">
+					<img src="https://unsplash.it/800/800/">
+					<img src="https://unsplash.it/800/600/">
+				</div>
+			</div>
+
+			<hr>
+
+			<p><a href="https://unsplash.it/1500/2000/" data-fancybox="gallery">Изображение</a>,
+			<a href="https://unsplash.it/2000/1500/" data-fancybox="gallery" data-caption="Подпись">с подписью</a>,
+			<a href="https://unsplash.it/2000/2000/" data-fancybox>одиночное</a></p>
+
+			<p><a href="#modal" data-fancybox>Модальное окно</a></p>
+
+			<div id="modal" class="hidden">
+				<p><img src="https://unsplash.it/800/600/"></p>
+				<p>Текст</p>
+			</div>
+
+			<hr>
 		</div>
 	</body>
 </html>
