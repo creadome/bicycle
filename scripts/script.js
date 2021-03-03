@@ -98,7 +98,7 @@ $(function() {
 		},
 
 		afterClose: function() {
-			if (fancyBack)
+			if (fancyBack && !$.fancybox.getInstance())
 				history.back();
 		}
 	});
