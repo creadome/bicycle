@@ -62,7 +62,7 @@ $(function() {
 	var fancyBack = true;
 
 	$.extend($.fancybox.defaults, {
-		baseClass: 'fancybox-custom',
+		baseClass: 'b-gallery',
 		buttons: ['close'],
 
 		animationEffect: 'fade',
@@ -70,6 +70,8 @@ $(function() {
 
 		transitionEffect: 'slide',
 		transitionDuration: 250,
+
+		gutter: 40,
 
 		closeExisting: true,
 		loop: true,
@@ -90,10 +92,9 @@ $(function() {
 			arrowRight: '<div class="fancybox-button next" data-fancybox-next><i class="fas fa-chevron-right"></i></div>'
 		},
 
-		gutter: 40,
-
 		onInit: function() {
 			fancyBack = true;
+
 			history.pushState(null, document.title, location.href);
 		},
 
@@ -110,21 +111,76 @@ $(function() {
 
 	$(window).on('popstate', function() {
 		fancyBack = false;
+
 		$.fancybox.close();
 	});
 
 	$('a[data-fancybox][href^="#"]').fancybox({
+		baseClass: 'b-modal',
 		touch: false
 	});
 });
 
 function init() {
-	$('.js-slider').not('.slick-initialized').slick({
-		dots: true,
-		adaptiveHeight: true,
+	autosize($('textarea'));
 
-		nextArrow: '<div class="next"><i class="fas fa-chevron-right"></i></div>',
-		prevArrow: '<div class="prev"><i class="fas fa-chevron-left"></i></div>'
+	$('.js-slider').not('.initialized').each(function() {
+		$(this).children().wrap('<div class="swiper-slide"></div>');
+
+		$(this).append(
+			'<div class="swiper-container">' +
+				'<div class="swiper-wrapper"></div>' +
+			'</div>' +
+
+			'<div class="pagination"></div>' +
+			'<div class="prev fas fa-chevron-left"></div>' +
+			'<div class="next fas fa-chevron-right"></div>'
+		);
+
+		$('.swiper-wrapper', this).append($('.swiper-slide', this));
+
+		new Swiper($('.swiper-container', this)[0], {
+			autoHeight: true,
+			spaceBetween: 20,
+
+			observer: true,
+			observeParents: true,
+
+			navigation: {
+				prevEl: $('.prev', this)[0],
+				nextEl: $('.next', this)[0]
+			},
+
+			pagination: {
+				el: $('.pagination', this)[0],
+				clickable: true
+			}
+		});
+
+		$(this).addClass('initialized');
+	});
+
+	$('.js-swiper').not('.initialized').each(function() {
+		$(this).children().wrap('<div class="swiper-slide"></div>');
+
+		$(this).append(
+			'<div class="swiper-container">' +
+				'<div class="swiper-wrapper"></div>' +
+			'</div>'
+		);
+
+		$('.swiper-wrapper', this).append($('.swiper-slide', this));
+
+		new Swiper($('.swiper-container', this)[0], {
+			slidesPerView: 'auto',
+			freeMode: true,
+			spaceBetween: 20,
+
+			observer: true,
+			observeParents: true
+		});
+
+		$(this).addClass('initialized');
 	});
 }
 

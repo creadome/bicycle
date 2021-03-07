@@ -7,15 +7,22 @@
 		<link href="favicon.ico" rel="icon">
 		<title>Bicycle</title>
 
-		<link href="//fonts.googleapis.com/css?family=Roboto:400,400i,700,700i,900&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
-		<link href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet">
-		<link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet">
-		<link href="styles/styles.css" rel="stylesheet">
+		<link href="https://fonts.gstatic.com" rel="preconnect">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
 
-		<script src="//kit.fontawesome.com/63a4a82b1e.js" crossorigin="anonymous"></script>
-		<script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-		<script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-		<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.0/swiper-bundle.min.css" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.0/swiper-bundle.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/4.0.2/autosize.min.js"></script>
+
+		<link href="styles/styles.css" rel="stylesheet">
 		<script src="scripts/script.js"></script>
 	</head>
 
@@ -111,7 +118,7 @@
 					<p><label for="input">Метка</label>
 					<input id="input" type="text"></p>
 
-					<p><textarea rows="5"></textarea></p>
+					<p><textarea rows="3"></textarea></p>
 
 					<p><select>
 						<option>Выпадающий список</option>
@@ -139,12 +146,20 @@
 
 			<hr>
 
-			<div class="b-slider">
-				<div class="js-slider">
-					<img src="https://unsplash.it/800/400/">
-					<img src="https://unsplash.it/800/800/">
-					<img src="https://unsplash.it/800/600/">
-				</div>
+			<div class="b-slider js-slider">
+				<img src="https://unsplash.it/800/400/">
+				<img src="https://unsplash.it/800/800/">
+				<img src="https://unsplash.it/800/600/">
+			</div>
+
+			<hr>
+
+			<div class="b-swiper js-swiper">
+				<img src="https://unsplash.it/220/220/">
+				<img src="https://unsplash.it/220/220/">
+				<img src="https://unsplash.it/220/220/">
+				<img src="https://unsplash.it/220/220/">
+				<img src="https://unsplash.it/220/220/">
 			</div>
 
 			<hr>
@@ -159,8 +174,6 @@
 				<p><img src="https://unsplash.it/800/600/"></p>
 				<p>Текст</p>
 			</div>
-
-			<hr>
 		</div>
 	</body>
 </html>
