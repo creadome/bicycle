@@ -28,7 +28,9 @@ $(function() {
 
 			input = $('input[name=' + name + ']', form);
 
-		if (input.length) input.val(submit.val());
+		if (input.length)
+			input.val(submit.val());
+
 		else
 			$('<input>').attr({
 				type: 'hidden',
@@ -44,8 +46,11 @@ $(function() {
 			replace = form.data('replace');
 
 		$.post(form.attr('action'), post, function(data) {
-			if (replace) $('#' + replace).replaceWith($(data).findAll('#' + replace));
-			else form.replaceWith(data);
+			if (replace)
+				$('#' + replace).replaceWith($(data).findAll('#' + replace));
+
+			else
+				form.replaceWith(data);
 		});
 
 		return false;
@@ -125,7 +130,7 @@ function init() {
 	autosize($('textarea'));
 
 	$('.js-slider').not('.initialized').each(function() {
-		$(this).children().wrap('<div class="swiper-slide"></div>');
+		$(this).addClass('initialized').children().wrap('<div class="swiper-slide"></div>');
 
 		$(this).append(
 			'<div class="swiper-container">' +
@@ -141,6 +146,7 @@ function init() {
 
 		new Swiper($('.swiper-container', this)[0], {
 			autoHeight: true,
+			watchOverflow: true,
 			spaceBetween: 20,
 
 			observer: true,
@@ -156,12 +162,10 @@ function init() {
 				clickable: true
 			}
 		});
-
-		$(this).addClass('initialized');
 	});
 
 	$('.js-swiper').not('.initialized').each(function() {
-		$(this).children().wrap('<div class="swiper-slide"></div>');
+		$(this).addClass('initialized').children().wrap('<div class="swiper-slide"></div>');
 
 		$(this).append(
 			'<div class="swiper-container">' +
@@ -173,14 +177,13 @@ function init() {
 
 		new Swiper($('.swiper-container', this)[0], {
 			slidesPerView: 'auto',
+			watchOverflow: true,
 			freeMode: true,
 			spaceBetween: 20,
 
 			observer: true,
 			observeParents: true
 		});
-
-		$(this).addClass('initialized');
 	});
 }
 
