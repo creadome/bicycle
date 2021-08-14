@@ -127,8 +127,6 @@ $(function() {
 });
 
 function init() {
-	autosize($('textarea'));
-
 	$('.js-slider').not('.initialized').each(function() {
 		$(this).addClass('initialized').children().wrap('<div class="swiper-slide"></div>');
 
